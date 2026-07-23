@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mídia Kit — PinguNana | Artista Multidisciplinar & Streamer</title>
+  <meta name="description" content="Mídia Kit oficial da PinguNana. Artista multidisciplinar, música ao vivo, arte visual DIY e streamer bilíngue (PT/EN).">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM — LIGHT MODE / A4 LANDSCAPE SLIDE DECK (CYBER-ZINE NEON)
+       ========================================================================== */
+    :root {
+      /* Palette Light Mode */
+      --bg-body: #f4f5f8;
+      --bg-slide: #ffffff;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --text-light-muted: #64748b;
+      
+      /* Accent Colors (Vibrant Acrílico & Neon) */
+      --pink-accent: #ff007a;
+      --cyan-accent: #00b8d4;
+      --violet-accent: #6d28d9;
+      --yellow-accent: #ffd600;
+      
+      --border-light: rgba(15, 23, 42, 0.12);
+      --border-dark: #0f172a;
+      
+      --font-heading: 'Outfit', 'Space Grotesk', sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      --shadow-slide: 0 20px 40px rgba(15, 23, 42, 0.08);
+      --shadow-sticker: 4px 4px 0px #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      padding-bottom: 60px;
+      /* Soft grid background on screen */
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(255, 0, 122, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(0, 184, 212, 0.04) 0%, transparent 40%),
+        linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+    }
+
+    /* ==========================================================================
+       TOP CONTROL BAR (WEB ONLY)
+       ========================================================================== */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .brand-logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .brand-logo span {
+      color: var(--pink-accent);
+    }
+
+    .bar-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .lang-toggle {
+      background: var(--bg-body);
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      padding: 3px;
+      display: flex;
+      gap: 2px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--text-dark);
+      color: #ffffff;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 2px solid var(--text-dark);
+    }
+
+    .btn-pdf {
+      background: #ffffff;
+      color: var(--text-dark);
+      box-shadow: 3px 3px 0px var(--text-dark);
+    }
+
+    .btn-pdf:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 5px 5px 0px var(--text-dark);
+    }
+
+    .btn-contact {
+      background: var(--pink-accent);
+      color: #ffffff;
+      border-color: var(--text-dark);
+      box-shadow: 3px 3px 0px var(--text-dark);
+    }
+
+    .btn-contact:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 5px 5px 0px var(--text-dark);
+    }
+
+    /* ==========================================================================
+       SLIDE DECK CONTAINER & SLIDE SPECIFICATIONS (A4 LANDSCAPE RATIO)
+       ========================================================================== */
+    .deck-container {
+      max-width: 1120px;
+      margin: 40px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    /* A4 Landscape Slide Frame: Aspect ratio 297mm x 210mm (1.414:1) */
+    .slide {
+      width: 100%;
+      aspect-ratio: 297 / 210;
+      background: var(--bg-slide);
+      border-radius: 16px;
+      border: 2px solid var(--text-dark);
+      box-shadow: var(--shadow-slide), 8px 8px 0px var(--text-dark);
+      padding: 44px 52px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      break-after: page;
+    }
+
+    /* Decorative Slide Header / Footer Indicators */
+    .slide-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-light-muted);
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+
+    .slide-num {
+      background: var(--text-dark);
+      color: #ffffff;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .slide-footer-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-light-muted);
+      border-top: 1px solid var(--border-light);
+      padding-top: 12px;
+      margin-top: auto;
+    }
+
+    /* ==========================================================================
+       SLIDE 1: COVER / HERO
+       ========================================================================== */
+    .slide-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      height: 100%;
+    }
+
+    .sticker-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--yellow-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 12px;
+      border: 2px solid var(--text-dark);
+      border-radius: 6px;
+      box-shadow: var(--shadow-sticker);
+      transform: rotate(-2deg);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 42px;
+      line-height: 1.1;
+      font-weight: 900;
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    .hero-title .highlight-pink {
+      color: var(--pink-accent);
+      background: rgba(255, 0, 122, 0.08);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .hero-title .highlight-cyan {
+      color: var(--cyan-accent);
+      background: rgba(0, 184, 212, 0.08);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    .hero-text {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      max-width: 520px;
+    }
+
+    /* Guitar Art Cutout Display (Light Zine Style) */
+    .hero-art-box {
+      background: #f8fafc;
+      border: 2px solid var(--text-dark);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 6px 6px 0px var(--violet-accent);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 320px;
+    }
+
+    .floating-sticker {
+      position: absolute;
+      padding: 6px 12px;
+      background: #ffffff;
+      border: 2px solid var(--text-dark);
+      border-radius: 6px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 11px;
+      box-shadow: var(--shadow-sticker);
+    }
+
+    .floating-sticker.s1 { top: -12px; left: -10px; transform: rotate(-6deg); background: var(--pink-accent); color: #fff; }
+    .floating-sticker.s2 { bottom: -10px; right: -10px; transform: rotate(5deg); background: var(--cyan-accent); color: #fff; }
+
+    /* ==========================================================================
+       SLIDE 2: NÚMEROS, AUDIÊNCIA & DEMOGRAFIA
+       ========================================================================== */
+    .slide-title {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .slide-title::before {
+      content: '';
+      width: 10px;
+      height: 24px;
+      background: var(--pink-accent);
+      border-radius: 3px;
+    }
+
+    .slide-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .card-stat {
+      background: #f8fafc;
+      border: 2px solid var(--text-dark);
+      border-radius: 12px;
+      padding: 18px 16px;
+      box-shadow: 4px 4px 0px var(--text-dark);
+    }
+
+    .stat-num {
+      font-family: var(--font-heading);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--pink-accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .demo-card {
+      background: rgba(248, 250, 252, 0.8);
+      border: 1.5px solid var(--border-light);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .demo-card h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+
+    .pill-tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 3px;
+      border: 1.5px solid var(--text-dark);
+    }
+
+    .pill-tag.pink { background: rgba(255, 0, 122, 0.1); color: var(--pink-accent); border-color: var(--pink-accent); }
+    .pill-tag.cyan { background: rgba(0, 184, 212, 0.1); color: var(--cyan-accent); border-color: var(--cyan-accent); }
+    .pill-tag.yellow { background: rgba(255, 214, 0, 0.2); color: #854d0e; border-color: var(--yellow-accent); }
+
+    /* ==========================================================================
+       SLIDE 3: DIFERENCIAIS & HERO ASSETS
+       ========================================================================== */
+    .assets-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .asset-box {
+      background: #ffffff;
+      border: 2px solid var(--text-dark);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 4px 4px 0px var(--text-dark);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .asset-icon-header {
+      width: 48px;
+      height: 48px;
+      background: #f1f5f9;
+      border: 1.5px solid var(--text-dark);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .asset-box h4 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .asset-box p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       SLIDE 4: FORMATOS DE PARCERIA & SOLUÇÕES
+       ========================================================================== */
+    .formats-slide-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .format-item {
+      background: #f8fafc;
+      border: 2px solid var(--text-dark);
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .format-item .f-tag {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--yellow-accent);
+      border: 1px solid var(--text-dark);
+    }
+
+    .format-item h4 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .format-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       SLIDE 5: BRAND SAFETY & CONTATO
+       ========================================================================== */
+    .contact-slide-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .safety-card {
+      background: #fff;
+      border: 2px solid var(--text-dark);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 4px 4px 0px var(--text-dark);
+    }
+
+    .safety-card h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .list-check {
+      list-style: none;
+    }
+
+    .list-check li {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-box-final {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      border: 2px solid var(--text-dark);
+      box-shadow: 6px 6px 0px var(--pink-accent);
+    }
+
+    .contact-box-final h3 {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .contact-box-final .email-link {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--cyan-accent);
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 20px;
+      border: 1.5px dashed var(--cyan-accent);
+      border-radius: 30px;
+    }
+
+    /* ==========================================================================
+       PRINT SPECIFICATIONS FOR EXACT A4 LANDSCAPE EXPPORT
+       ========================================================================== */
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .top-bar {
+        display: none !important;
+      }
+
+      .deck-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+
+      .slide {
+        width: 297mm !important;
+        height: 210mm !important;
+        aspect-ratio: auto !important;
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 15mm 20mm !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        page-break-inside: avoid !important;
+      }
+    }
+
+    /* Responsive Screen adjustments */
+    @media (max-width: 900px) {
+      .slide {
+        aspect-ratio: auto;
+        min-height: auto;
+        padding: 24px;
+      }
+      .slide-hero-grid, .demo-grid, .formats-slide-grid, .contact-slide-grid, .assets-grid {
+        grid-template-columns: 1fr;
+      }
+      .metrics-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR DE CONTROLE (SÓ TELA) -->
+  <div class="top-bar">
+    <div class="brand-logo">Pingu<span>Nana</span> <small style="font-size:13px; font-weight:500; color:#64748b; margin-left:8px;">| Mídia Kit PDF Deck</small></div>
+    
+    <div class="bar-actions">
+      <!-- Toggle de Idioma PT / EN -->
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-pt" onclick="setLanguage('pt')">PT</button>
+        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+      </div>
+
+      <button class="btn-action btn-pdf" onclick="window.print()">
+        <span>🖨️</span> <span data-i18n="btn_pdf">Baixar PDF (A4 Paisagem)</span>
+      </button>
+
+      <a href="mailto:luanapingumusic@gmail.com" class="btn-action btn-contact" data-i18n="btn_contact">
+        Contato
+      </a>
+    </div>
+  </div>
+
+  <!-- SLIDE DECK (LÂMINAS FORMATO A4 PAISAGEM) -->
+  <div class="deck-container">
+
+    <!-- ================= SLIDE 1: CAPA / HERO ================= -->
+    <div class="slide" id="slide-1">
+      <div class="slide-meta">
+        <span>PINGUNANA — MEDIA KIT</span>
+        <span class="slide-num">SLIDE 01</span>
+      </div>
+
+      <div class="slide-hero-grid">
+        <div>
+          <div class="sticker-tag" data-i18n="hero_badge">🎨 Artista Multidisciplinar · Música & Arte · Streamer</div>
+          
+          <h1 class="hero-title">
+            <span data-i18n="h_title_1">Música ao vivo, arte autoral e</span> 
+            <span class="highlight-pink" data-i18n="h_title_2">estética DIY</span> 
+            <span data-i18n="h_title_3">com</span> 
+            <span class="highlight-cyan" data-i18n="h_title_4">alcance real</span>.
+          </h1>
+
+          <p class="hero-text" data-i18n="h_desc">
+            PinguNana une performances musicais, ilustração e ética DIY punk em lives acolhedoras na Twitch e vídeos virais, gerando conexões autênticas com a nova geração.
+          </p>
+        </div>
+
+        <!-- HERO ASSET: GUITARRA CUSTOMIZADA recortada com estética Zine -->
+        <div class="hero-art-box">
+          <div class="floating-sticker s1">🎸 Hand-Painted Guitar</div>
+          <div class="floating-sticker s2">✨ Bilíngue PT/EN</div>
+          
+          <svg width="200" height="250" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="300" rx="12" fill="#F1F5F9"/>
+            <!-- Body Outline -->
+            <path d="M70 140 C50 160 40 200 65 240 C90 270 120 270 140 240 C160 200 150 160 130 140 C120 120 140 90 120 70 L110 70 L110 20 L90 20 L90 70 L80 70 C60 90 80 120 70 140 Z" fill="#0F172A" stroke="#00B8D4" stroke-width="3"/>
+            <!-- Acrylic Posca Paint Marks -->
+            <path d="M65 180 C80 160 120 220 135 190" stroke="#FF007A" stroke-width="8" stroke-linecap="round"/>
+            <path d="M80 210 C100 230 110 170 125 230" stroke="#FFD600" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="95" cy="195" r="7" fill="#00B8D4"/>
+            <!-- Neck & Pickups -->
+            <rect x="95" y="40" width="10" height="110" fill="#334155"/>
+            <rect x="85" y="150" width="30" height="10" fill="#FF007A" rx="2"/>
+            <rect x="85" y="170" width="30" height="10" fill="#00B8D4" rx="2"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="slide-footer-meta">
+        <span>Contratos & Gestão via MEI Responsável</span>
+        <span>luanapingumusic@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- ================= SLIDE 2: NÚMEROS & DEMOGRAFIA ================= -->
+    <div class="slide" id="slide-2">
+      <div class="slide-meta">
+        <span>PINGUNANA — MÉTRICAS & ALCANCE</span>
+        <span class="slide-num">SLIDE 02</span>
+      </div>
+
+      <div>
+        <h2 class="slide-title" data-i18n="s2_title">Métricas & Audiência</h2>
+        <p class="slide-subtitle" data-i18n="s2_sub">Capacidade de viralização em vídeo curto combinada com núcleo de comunidade em live.</p>
+
+        <!-- 4 Stat Cards -->
+        <div class="metrics-row">
+          <div class="card-stat">
+            <div class="stat-num">250K+</div>
+            <div class="stat-label" data-i18n="m_views">Views (Últimos 30 Dias)</div>
+          </div>
+          <div class="card-stat">
+            <div class="stat-num">~1.2K</div>
+            <div class="stat-label" data-i18n="m_ig">Seguidores no Instagram</div>
+          </div>
+          <div class="card-stat">
+            <div class="stat-num">Nível 2</div>
+            <div class="stat-label" data-i18n="m_hype">Hypetrain Twitch (1ª Semana)</div>
+          </div>
+          <div class="card-stat">
+            <div class="stat-num">PT / EN</div>
+            <div class="stat-label" data-i18n="m_lang">Retenção Bilíngue Global</div>
+          </div>
+        </div>
+
+        <div class="demo-grid">
+          <div class="demo-card">
+            <h4 data-i18n="demo_title">👤 Perfil do Público</h4>
+            <span class="pill-tag pink" data-i18n="d1">18 a 24 anos (Predominante)</span>
+            <span class="pill-tag cyan" data-i18n="d2">Equilíbrio Homens / Mulheres</span>
+            <span class="pill-tag yellow" data-i18n="d3">Brasil & Público Internacional</span>
+          </div>
+
+          <div class="demo-card">
+            <h4 data-i18n="interests_title">🎯 Afinidade de Conteúdo</h4>
+            <span class="pill-tag">Música Indie & Rock</span>
+            <span class="pill-tag pink">Arte & Ilustração</span>
+            <span class="pill-tag cyan">Cultura DIY / Punk</span>
+            <span class="pill-tag yellow">Streaming & Games</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-meta">
+        <span>Dados consolidados em Julho/2026</span>
+        <span>twitch.tv/pingunana_</span>
+      </div>
+    </div>
+
+    <!-- ================= SLIDE 3: DIFERENCIAIS & HERO ASSETS ================= -->
+    <div class="slide" id="slide-3">
+      <div class="slide-meta">
+        <span>PINGUNANA — HERO ASSETS & DIFERENCIAIS</span>
+        <span class="slide-num">SLIDE 03</span>
+      </div>
+
+      <div>
+        <h2 class="slide-title" data-i18n="s3_title">Diferenciais & Hero Assets</h2>
+        <p class="slide-subtitle" data-i18n="s3_sub">A união autêntica entre performance musical, artes visuais manuais e ética punk/DIY.</p>
+
+        <div class="assets-grid">
+          <div class="asset-box">
+            <div class="asset-icon-header">🎸</div>
+            <h4 data-i18n="a1_title">Instrumentos Customizados</h4>
+            <p data-i18n="a1_desc">Pintura autoral com canetas acrílicas Posca e tintas em violões e guitarras. Assinatura visual que chama atenção imediata em vídeo e live.</p>
+          </div>
+
+          <div class="asset-box">
+            <div class="asset-icon-header">🎨</div>
+            <h4 data-i18n="a2_title">Arte Visual & Speedpaints</h4>
+            <p data-i18n="a2_desc">Ilustração digital, pintura a óleo e trabalhos manuais produzidos ao vivo na Twitch e em processos gravados de alto engajamento.</p>
+          </div>
+
+          <div class="asset-box">
+            <div class="asset-icon-header">🗣️</div>
+            <h4 data-i18n="a3_title">Recomendação Genuína</h4>
+            <p data-i18n="a3_desc">Indicação orgânica de produtos e marcas que a criadora realmente utiliza, gerando altas taxas de conversão e confiança da comunidade.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-meta">
+        <span>Multiformato: Vídeo Curto + Live Twitch + Arte</span>
+        <span>instagram.com/pingunana_</span>
+      </div>
+    </div>
+
+    <!-- ================= SLIDE 4: FORMATOS DE PARCERIA ================= -->
+    <div class="slide" id="slide-4">
+      <div class="slide-meta">
+        <span>PINGUNANA — FORMATOS DE PARCERIA</span>
+        <span class="slide-num">SLIDE 04</span>
+      </div>
+
+      <div>
+        <h2 class="slide-title" data-i18n="s4_title">Como Podemos Trabalhar Juntos</h2>
+        <p class="slide-subtitle" data-i18n="s4_sub">Modelos leves e eficazes focados em gerar valor e engajamento orgânico.</p>
+
+        <div class="formats-slide-grid">
+          <div class="format-item">
+            <span class="f-tag" data-i18n="ft1">Fase 1 · Ativo</span>
+            <h4 data-i18n="f1_title">Permuta / Envios de PR</h4>
+            <p data-i18n="f1_desc">Envio de produtos para demonstração autêntica em live na Twitch, unboxing e criação de vídeos curtos orgânicos (Reels/TikTok).</p>
+          </div>
+
+          <div class="format-item">
+            <span class="f-tag" data-i18n="ft2">Exclusivo</span>
+            <h4 data-i18n="f2_title">Customização com o Produto</h4>
+            <p data-i18n="f2_desc">Uso de tintas/canetas da marca para customizar instrumentos ou objetos ao vivo, com vídeo de processo (antes/depois).</p>
+          </div>
+
+          <div class="format-item">
+            <span class="f-tag" data-i18n="ft3">Presencial (Goiânia/GO)</span>
+            <h4 data-i18n="f3_title">Ações em Loja & Estúdio</h4>
+            <p data-i18n="f3_desc">Gravação presencial em lojas de instrumentos, arte ou estúdios da região para criação de conteúdo humorístico e de nicho.</p>
+          </div>
+
+          <div class="format-item">
+            <span class="f-tag" data-i18n="ft4">Escalável</span>
+            <h4 data-i18n="f4_title">Cupom & Afiliados</h4>
+            <p data-i18n="f4_desc">Códigos de desconto exclusivos promovidos continuamente nas transmissões ao vivo e links da bio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer-meta">
+        <span>Prioridade: Instrumentos, Materiais de Arte, Audio Gear & Moda</span>
+        <span>Modelos LEVES de parceria</span>
+      </div>
+    </div>
+
+    <!-- ================= SLIDE 5: BRAND SAFETY & CONTATO ================= -->
+    <div class="slide" id="slide-5">
+      <div class="slide-meta">
+        <span>PINGUNANA — BRAND SAFETY & CONTATO</span>
+        <span class="slide-num">SLIDE 05</span>
+      </div>
+
+      <div class="contact-slide-grid">
+        <div class="safety-card">
+          <h4 style="color:var(--pink-accent);" data-i18n="safe_title">🛡️ Diretrizes de Marca & Governança</h4>
+          <ul class="list-check">
+            <li><strong style="color:#16a34a;">✓</strong> <span data-i18n="sp1">Comunidade acolhedora e LGBTQIA+ friendly</span></li>
+            <li><strong style="color:#16a34a;">✓</strong> <span data-i18n="sp2">Comunicação bilíngue fluente (PT/EN)</span></li>
+            <li><strong style="color:#dc2626;">✕</strong> <span data-i18n="sn1">Sem apostas / casas de bets</span></li>
+            <li><strong style="color:#dc2626;">✕</strong> <span data-i18n="sn2">Sem bebidas alcoólicas ou conteúdo adulto</span></li>
+            <li><strong style="color:#dc2626;">✕</strong> <span data-i18n="sn3">Sem conteúdo de cunho religioso</span></li>
+          </ul>
+        </div>
+
+        <div class="contact-box-final">
+          <h3 data-i18n="c_title">Vamos criar juntos?</h3>
+          <a href="mailto:luanapingumusic@gmail.com" class="email-link">luanapingumusic@gmail.com</a>
+          <p style="font-size:12px; color:#94a3b8; line-height:1.4;" data-i18n="c_desc">
+            Todas as negociações e emissões fiscais são conduzidas pela responsável legal da artista via MEI regularizado.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide-footer-meta">
+        <span>PinguNana Media Kit © 2026</span>
+        <span>luanapingumusic@gmail.com</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT i18n & FUNCTIONALITY -->
+  <script>
+    const translations = {
+      pt: {
+        btn_pdf: "Baixar PDF (A4 Paisagem)",
+        btn_contact: "Contato",
+        hero_badge: "🎨 Artista Multidisciplinar · Música & Arte · Streamer",
+        h_title_1: "Música ao vivo, arte autoral e",
+        h_title_2: "estética DIY",
+        h_title_3: "com",
+        h_title_4: "alcance real",
+        h_desc: "PinguNana une performances musicais, ilustração e ética DIY punk em lives acolhedoras na Twitch e vídeos virais, gerando conexões autênticas com a nova geração.",
+        s2_title: "Métricas & Audiência",
+        s2_sub: "Capacidade de viralização em vídeo curto combinada com núcleo de comunidade em live.",
+        m_views: "Views (Últimos 30 Dias)",
+        m_ig: "Seguidores no Instagram",
+        m_hype: "Hypetrain Twitch (1ª Semana)",
+        m_lang: "Retenção Bilíngue Global",
+        demo_title: "👤 Perfil do Público",
+        d1: "18 a 24 anos (Predominante)",
+        d2: "Equilíbrio Homens / Mulheres",
+        d3: "Brasil & Público Internacional",
+        interests_title: "🎯 Afinidade de Conteúdo",
+        s3_title: "Diferenciais & Hero Assets",
+        s3_sub: "A união autêntica entre performance musical, artes visuais manuais e ética punk/DIY.",
+        a1_title: "Instrumentos Customizados",
+        a1_desc: "Pintura autoral com canetas acrílicas Posca e tintas em violões e guitarras. Assinatura visual que chama atenção imediata em vídeo e live.",
+        a2_title: "Arte Visual & Speedpaints",
+        a2_desc: "Ilustração digital, pintura a óleo e trabalhos manuais produzidos ao vivo na Twitch e em processos gravados de alto engajamento.",
+        a3_title: "Recomendação Genuína",
+        a3_desc: "Indicação orgânica de produtos e marcas que a criadora realmente utiliza, gerando altas taxas de conversão e confiança da comunidade.",
+        s4_title: "Como Podemos Trabalhar Juntos",
+        s4_sub: "Modelos leves e eficazes focados em gerar valor e engajamento orgânico.",
+        ft1: "Fase 1 · Ativo",
+        f1_title: "Permuta / Envios de PR",
+        f1_desc: "Envio de produtos para demonstração autêntica em live na Twitch, unboxing e criação de vídeos curtos orgânicos (Reels/TikTok).",
+        ft2: "Exclusivo",
+        f2_title: "Customização com o Produto",
+        f2_desc: "Uso de tintas/canetas da marca para customizar instrumentos ou objetos ao vivo, com vídeo de processo (antes/depois).",
+        ft3: "Presencial (Goiânia/GO)",
+        f3_title: "Ações em Loja & Estúdio",
+        f3_desc: "Gravação presencial em lojas de instrumentos, arte ou estúdios da região para criação de conteúdo humorístico e de nicho.",
+        ft4: "Escalável",
+        f4_title: "Cupom & Afiliados",
+        f4_desc: "Códigos de desconto exclusivos promovidos continuamente nas transmissões ao vivo e links da bio.",
+        safe_title: "🛡️ Diretrizes de Marca & Governança",
+        sp1: "Comunidade acolhedora e LGBTQIA+ friendly",
+        sp2: "Comunicação bilíngue fluente (PT/EN)",
+        sn1: "Sem apostas / casas de bets",
+        sn2: "Sem bebidas alcoólicas ou conteúdo adulto",
+        sn3: "Sem conteúdo de cunho religioso",
+        c_title: "Vamos criar juntos?",
+        c_desc: "Todas as negociações e emissões fiscais são conduzidas pela responsável legal da artista via MEI regularizado."
+      },
+      en: {
+        btn_pdf: "Download PDF (A4 Landscape)",
+        btn_contact: "Contact",
+        hero_badge: "🎨 Multidisciplinary Artist · Music & Art · Streamer",
+        h_title_1: "Live music, original art &",
+        h_title_2: "DIY aesthetics",
+        h_title_3: "with",
+        h_title_4: "real reach",
+        h_desc: "PinguNana blends live musical performances, illustration, and punk DIY ethics into welcoming Twitch streams and viral videos, building authentic connections with the next generation.",
+        s2_title: "Metrics & Audience",
+        s2_sub: "Proven short-form video virality paired with a dedicated live community core.",
+        m_views: "Views (Last 30 Days)",
+        m_ig: "Instagram Followers",
+        m_hype: "Twitch Hypetrain (1st Week)",
+        m_lang: "Global Bilingual Retention",
+        demo_title: "👤 Audience Profile",
+        d1: "18 to 24 years old (Predominant)",
+        d2: "Balanced Gender Split",
+        d3: "Brazil & International Community",
+        interests_title: "🎯 Content Affinity",
+        s3_title: "Differentiators & Hero Assets",
+        s3_sub: "The authentic cross section of live music performance, manual visual arts, and DIY ethics.",
+        a1_title: "Custom Hand-Painted Guitars",
+        a1_desc: "Custom acrylic paint art (Posca) on acoustic and electric guitars. A visual signature that immediately grabs attention on video and live stream.",
+        a2_title: "Visual Art & Speedpaints",
+        a2_desc: "Digital illustration, oil painting, and manual crafts created live on Twitch and featured in viral process videos.",
+        a3_title: "Genuine Recommendation",
+        a3_desc: "Organic endorsement of gear and products the creator truly uses, building community trust and high conversion.",
+        s4_title: "How We Can Work Together",
+        s4_sub: "Lightweight, effective collaboration formats focused on organic value creation.",
+        ft1: "Phase 1 · Active",
+        f1_title: "Product Gifting / PR",
+        f1_desc: "Product gifting for authentic live testing on Twitch, unboxing, and organic short-form video creation (Reels/TikTok).",
+        ft2: "Exclusive",
+        f2_title: "Product Customization",
+        f2_desc: "Using brand acrylic markers/paints to custom-paint gear live on stream with process video highlights.",
+        ft3: "In-Person (Goiânia/BR)",
+        f3_title: "In-Store & Studio Visits",
+        f3_desc: "On-site visits to music stores and studios for dynamic, humorous local content creation.",
+        ft4: "Scalable",
+        f4_title: "Coupons & Affiliate Deals",
+        f4_desc: "Exclusive discount codes promoted continuously on live streams and bio links.",
+        safe_title: "🛡️ Brand Safety & Governance",
+        sp1: "Welcoming & LGBTQIA+ friendly community",
+        sp2: "Fluent bilingual communication (PT/EN)",
+        sn1: "No gambling / sports betting",
+        sn2: "No alcohol or adult content",
+        sn3: "No religious content",
+        c_title: "Let's create together?",
+        c_desc: "All negotiations and legal contracts are managed by legal guardians via registered business entity (MEI)."
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(`btn-${lang}`).classList.add('active');
+
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+    }
+  </script>
+</body>
+</html>
