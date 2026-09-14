@@ -1,0 +1,22 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["Alcance","Interacoes","Seguidores","Visitas_Cliques","Calendario","pAccountName","pDataBasePath"]
+
+ref table Alcance
+ref table Interacoes
+ref table Seguidores
+ref table Visitas_Cliques
+ref table Calendario
+
+ref cultureInfo pt-BR
+

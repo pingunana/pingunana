@@ -1,0 +1,16 @@
+relationship rel_Alcance_Calendario
+	fromColumn: Alcance.Data
+	toColumn: Calendario.Data
+
+relationship rel_Interacoes_Calendario
+	fromColumn: Interacoes.Data
+	toColumn: Calendario.Data
+
+relationship rel_Seguidores_Calendario
+	fromColumn: Seguidores.Data
+	toColumn: Calendario.Data
+
+relationship rel_Visitas_Calendario
+	fromColumn: Visitas_Cliques.Data
+	toColumn: Calendario.Data
+

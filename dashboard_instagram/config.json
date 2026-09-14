@@ -1,0 +1,13 @@
+{
+  "default_account": "pingunana",
+  "data_base_path": "./data",
+  "sessions_base_path": "./sessions",
+  "accounts": [
+    {
+      "id": "pingunana",
+      "name": "Pingunana Oficial",
+      "username": "pingunana",
+      "session_file": "pingunana.json"
+    }
+  ]
+}

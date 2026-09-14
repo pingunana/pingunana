@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "v_card_seguidores",
+  "position": {
+    "x": 740,
+    "y": 20,
+    "z": 4,
+    "height": 110,
+    "width": 220,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Fields": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Seguidores"
+                    }
+                  },
+                  "Property": "Novos Seguidores"
+                }
+              },
+              "queryRef": "Seguidores.Novos Seguidores"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "instagram_pingunana"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c842bc75-9c65-438e-93a4-05ac494cb8ed"
+  }
+}

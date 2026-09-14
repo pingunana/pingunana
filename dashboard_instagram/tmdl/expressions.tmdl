@@ -1,0 +1,7 @@
+expression pAccountName = "pingunana" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+    lineageTag: a1b2c3d4-0001
+    queryGroup: Parametros
+
+expression pDataBasePath = "C:\Users\Admin\Documents\Pingunana\dashboard_instagram\data" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+    lineageTag: a1b2c3d4-0002
+    queryGroup: Parametros

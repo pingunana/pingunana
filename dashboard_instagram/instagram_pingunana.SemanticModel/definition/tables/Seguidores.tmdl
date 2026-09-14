@@ -1,0 +1,40 @@
+table Seguidores
+	lineageTag: e5f6g7h8-0003
+
+	measure 'Novos Seguidores' = SUM(Seguidores[Seguidores])
+		formatString: #,##0
+		lineageTag: m1m2m3m4-0004
+
+	column Data
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: c1c2c3c4-0005
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Seguidores
+		dataType: int64
+		formatString: #,##0
+		lineageTag: c1c2c3c4-0006
+		summarizeBy: sum
+		sourceColumn: Follows
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Seguidores = m
+		mode: import
+		source =
+				let
+					Path = pDataBasePath & "\" & pAccountName & "\Follows.csv",
+					Source = Csv.Document(File.Contents(Path), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.None]),
+					#"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					#"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Follows", Int64.Type}})
+				in
+					#"Changed Type"
+
+	annotation PBI_ResultType = Table
+

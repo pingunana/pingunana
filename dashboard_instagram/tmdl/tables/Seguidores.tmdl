@@ -1,0 +1,27 @@
+table Seguidores
+    lineageTag: e5f6g7h8-0003
+
+    column Data
+        dataType: dateTime
+        formatString: dd/mm/yyyy
+        sourceColumn: Date
+
+    column Seguidores
+        dataType: int64
+        formatString: #,##0
+        sourceColumn: Follows
+
+    measure 'Novos Seguidores' = SUM(Seguidores[Seguidores])
+        formatString: #,##0
+        description: "Total de novos seguidores obtidos no período."
+
+    partition Seguidores-Partition = m
+        mode: import
+        source =
+            let
+                Path = pDataBasePath & "\" & pAccountName & "\Follows.csv",
+                Source = Csv.Document(File.Contents(Path), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.None]),
+                #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+                #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Follows", Int64.Type}})
+            in
+                #"Changed Type"

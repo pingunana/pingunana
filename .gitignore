@@ -1,3 +1,11 @@
-*.md
 *.xlsx
 .~lock*
+
+# Dependencies installed locally for the Instagram dashboard.
+**/node_modules/
+
+# Browser authentication state. Never commit a logged-in session.
+dashboard_instagram/sessions/
+
+# Power BI Desktop machine-specific settings and local cache.
+dashboard_instagram/**/.pbi/

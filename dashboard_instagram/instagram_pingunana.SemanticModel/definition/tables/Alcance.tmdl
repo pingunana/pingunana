@@ -1,0 +1,44 @@
+table Alcance
+	lineageTag: e5f6g7h8-0001
+
+	measure 'Total Alcance' = SUM(Alcance[Alcance])
+		formatString: #,##0
+		lineageTag: m1m2m3m4-0001
+
+	measure 'Engajamento %' = DIVIDE([Total Interacoes], [Total Alcance], 0)
+		formatString: 0.00%
+		lineageTag: m1m2m3m4-0002
+
+	column Data
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: c1c2c3c4-0001
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Alcance
+		dataType: int64
+		formatString: #,##0
+		lineageTag: c1c2c3c4-0002
+		summarizeBy: sum
+		sourceColumn: Reach
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Alcance = m
+		mode: import
+		source =
+				let
+					Path = pDataBasePath & "\" & pAccountName & "\Reach.csv",
+					Source = Csv.Document(File.Contents(Path), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.None]),
+					#"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					#"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Reach", Int64.Type}})
+				in
+					#"Changed Type"
+
+	annotation PBI_ResultType = Table
+

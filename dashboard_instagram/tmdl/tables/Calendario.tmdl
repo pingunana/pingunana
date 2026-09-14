@@ -1,0 +1,38 @@
+table Calendario
+    lineageTag: e5f6g7h8-0005
+    dataCategory: Time
+
+    column Data
+        isKey
+        dataType: dateTime
+        formatString: dd/mm/yyyy
+        sourceColumn: Date
+
+    column Ano
+        dataType: int64
+        formatString: 0
+        sourceColumn: Year
+
+    column MesAno
+        dataType: string
+        sourceColumn: MonthYear
+
+    column DiaDaSemana
+        dataType: string
+        sourceColumn: DayOfWeek
+
+    partition Calendario-Partition = m
+        mode: import
+        source =
+            let
+                StartDate = #date(2025, 1, 1),
+                EndDate = Date.From(DateTime.LocalNow()),
+                DayCount = Duration.Days(EndDate - StartDate) + 1,
+                DateList = List.Dates(StartDate, DayCount, #duration(1, 0, 0, 0)),
+                TableFromList = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}, null, ExtraValues.Error),
+                Typed = Table.TransformColumnTypes(TableFromList, {{"Date", type date}}),
+                AddYear = Table.AddColumn(Typed, "Year", each Date.Year([Date]), Int64.Type),
+                AddMonthYear = Table.AddColumn(AddYear, "MonthYear", each Date.ToText([Date], "MMM/yyyy"), type text),
+                AddDayOfWeek = Table.AddColumn(AddMonthYear, "DayOfWeek", each Date.ToText([Date], "dddd"), type text)
+            in
+                AddDayOfWeek

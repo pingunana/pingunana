@@ -1,0 +1,27 @@
+table Interacoes
+    lineageTag: e5f6g7h8-0002
+
+    column Data
+        dataType: dateTime
+        formatString: dd/mm/yyyy
+        sourceColumn: Date
+
+    column Interacoes
+        dataType: int64
+        formatString: #,##0
+        sourceColumn: Interactions
+
+    measure 'Total Interacoes' = SUM(Interacoes[Interacoes])
+        formatString: #,##0
+        description: "Soma total das interações (curtidas, comentários, compartilhamentos, salvamentos)."
+
+    partition Interacoes-Partition = m
+        mode: import
+        source =
+            let
+                Path = pDataBasePath & "\" & pAccountName & "\Interactions.csv",
+                Source = Csv.Document(File.Contents(Path), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.None]),
+                #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+                #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Interactions", Int64.Type}})
+            in
+                #"Changed Type"

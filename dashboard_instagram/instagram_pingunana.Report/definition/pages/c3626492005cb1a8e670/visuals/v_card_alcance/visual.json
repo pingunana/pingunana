@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "v_card_alcance",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "z": 1,
+    "height": 110,
+    "width": 220,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Fields": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Alcance"
+                    }
+                  },
+                  "Property": "Total Alcance"
+                }
+              },
+              "queryRef": "Alcance.Total Alcance"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4c452ed72cc1888e588b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Alcance"
+              }
+            },
+            "Property": "Total Alcance"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

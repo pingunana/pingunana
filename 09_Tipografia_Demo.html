@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo de Tipografia - PinguNana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,650,60,1&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lilac:#9B6BB1;
+  --wave1:#7A4A90;
+  --wave2:#5E3576;
+  --deep:#50164A;
+  --yellow:#FDD259;
+  --cream:#FFF3D6;
+  --off:#F7E9F7;
+  --card:rgba(80,22,74,0.58);
+  --cardbord:rgba(253,210,89,0.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{min-height:100%;background:var(--lilac)}
+body{
+  min-height:100%;color:var(--off);line-height:1.55;
+  background:
+    radial-gradient(circle at 16% 10%, rgba(253,210,89,0.18), transparent 18rem),
+    radial-gradient(circle at 86% 14%, rgba(255,243,214,0.12), transparent 16rem),
+    linear-gradient(180deg, rgba(80,22,74,0.0) 0%, rgba(80,22,74,0.28) 100%),
+    var(--lilac);
+  overflow-x:hidden;
+}
+body::before,
+body::after{
+  content:"";position:fixed;left:-8vw;right:-8vw;height:34vh;z-index:-2;pointer-events:none;
+  background:linear-gradient(180deg, rgba(122,74,144,0.70), rgba(94,53,118,0.48));
+  clip-path:polygon(0 26%, 14% 14%, 28% 32%, 43% 17%, 58% 30%, 74% 12%, 90% 28%, 100% 18%, 100% 82%, 0 92%);
+}
+body::before{top:11vh;transform:rotate(-1.5deg)}
+body::after{bottom:7vh;transform:rotate(1.8deg);opacity:0.72}
+.bg-marks{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.75}
+.mark{position:absolute;color:var(--yellow);font-weight:800;line-height:1;filter:drop-shadow(0 2px 0 rgba(80,22,74,0.25))}
+.mark:nth-child(1){left:8%;top:14%;font-size:46px;transform:rotate(-18deg)}
+.mark:nth-child(2){right:11%;top:18%;font-size:28px;transform:rotate(20deg)}
+.mark:nth-child(3){left:17%;bottom:18%;font-size:34px;transform:rotate(13deg)}
+.mark:nth-child(4){right:18%;bottom:12%;font-size:52px;transform:rotate(-9deg)}
+.wrap{width:min(1180px,100%);margin:0 auto;padding:38px 24px 56px}
+.header{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:26px}
+.kicker{display:inline-block;padding:8px 18px;border:2px solid var(--yellow);border-radius:999px;background:var(--deep);color:var(--cream);font:700 12px/1 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:1.4px}
+.header h1{margin-top:14px;color:#fff;font:800 clamp(38px,7vw,76px)/0.95 'Outfit',sans-serif;text-shadow:0 3px 0 rgba(80,22,74,0.35);letter-spacing:0}
+.header h1 span{color:var(--yellow)}
+.header p{max-width:48ch;color:var(--cream);font:500 15px/1.55 'DM Sans',sans-serif}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.sample{background:rgba(80,22,74,0.42);border:1.5px solid var(--cardbord);border-radius:18px;padding:20px;backdrop-filter:blur(8px);position:relative;overflow:hidden}
+.sample::before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--yellow),rgba(253,210,89,0));opacity:0.9}
+.titlebox{display:inline-block;padding:8px 22px;border-radius:999px;border:2.5px solid var(--yellow);background:var(--cream);color:var(--deep);font-size:18px;font-weight:700;margin-bottom:18px}
+.cover{display:grid;grid-template-columns:1.2fr 0.8fr;gap:18px;align-items:center}
+.brandname{font-size:clamp(42px,6vw,68px);font-weight:800;line-height:0.92;color:#fff;text-shadow:0 3px 0 rgba(80,22,74,0.35);letter-spacing:0}
+.brandname .y{color:var(--yellow)}
+.tagline{margin:14px 0;color:var(--cream);font-size:12px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase}
+.lead{font-size:17px;max-width:42ch;color:var(--off)}
+.lead b{color:var(--yellow)}
+.frame{position:relative;min-height:220px;border:3px solid var(--yellow);border-radius:20px;background:linear-gradient(150deg,#7A4A90,#50164A);display:grid;place-items:center;text-align:center;padding:20px;color:var(--cream);font-weight:700}
+.frame::before,.frame::after{content:"";position:absolute;inset:0;border-radius:20px;pointer-events:none}.frame::before{transform:translate(9px,7px);border:2px solid rgba(253,210,89,0.55)}.frame::after{transform:translate(-8px,10px);border:4px solid var(--wave1)}
+.stickers{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.sticker{font-size:12px;font-weight:800;padding:7px 12px;border-radius:999px;background:var(--deep);border:2px solid var(--yellow);color:var(--cream)}.sticker:nth-child(odd){transform:rotate(-2deg)}.sticker:nth-child(even){transform:rotate(2deg)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.tile{background:var(--card);border:1px solid var(--cardbord);border-radius:16px;padding:14px;color:var(--off)}.metric{font-size:30px;font-weight:800;color:var(--yellow);line-height:1}.metric-label{color:var(--cream);font-size:12px;margin-top:6px;opacity:0.92}.tile h3{color:#fff;font-size:15px;margin-bottom:6px}.tile p{font-size:13.5px;color:var(--off)}
+.note{margin-top:14px;color:var(--cream);font-size:12.5px;opacity:0.9}.verdict{display:inline-block;margin-top:12px;padding:6px 11px;border-radius:999px;background:rgba(253,210,89,0.12);border:1px solid rgba(253,210,89,0.55);color:var(--yellow);font-size:12px;font-weight:700}
+.outfit-dm{font-family:'DM Sans',sans-serif}.outfit-dm .display,.outfit-dm .brandname,.outfit-dm .titlebox,.outfit-dm .metric,.outfit-dm .sticker,.outfit-dm .tagline{font-family:'Outfit',sans-serif}
+.jakarta-dm{font-family:'DM Sans',sans-serif}.jakarta-dm .display,.jakarta-dm .brandname,.jakarta-dm .titlebox,.jakarta-dm .metric,.jakarta-dm .sticker,.jakarta-dm .tagline{font-family:'Plus Jakarta Sans',sans-serif}
+.manrope-inter{font-family:'Inter',sans-serif}.manrope-inter .display,.manrope-inter .brandname,.manrope-inter .titlebox,.manrope-inter .metric,.manrope-inter .sticker,.manrope-inter .tagline{font-family:'Manrope',sans-serif}
+.fraunces-dm{font-family:'DM Sans',sans-serif}.fraunces-dm .brandname{font-family:'Fraunces',serif;font-weight:650}.fraunces-dm .display,.fraunces-dm .titlebox,.fraunces-dm .metric,.fraunces-dm .sticker,.fraunces-dm .tagline{font-family:'Outfit',sans-serif}
+@media (max-width:900px){.header{display:block}.header p{margin-top:12px}.grid{grid-template-columns:1fr}.cover{grid-template-columns:1fr}.frame{min-height:180px}.metrics{grid-template-columns:1fr 1fr}.sample{padding:17px}.wrap{padding-inline:18px}.brandname{font-size:48px}}
+@media (max-width:520px){.metrics{grid-template-columns:1fr}.header h1{font-size:42px}.brandname{font-size:40px}.lead{font-size:15.5px}.titlebox{font-size:16px}.sample{border-radius:14px}}
+</style>
+</head>
+<body>
+<div class="bg-marks" aria-hidden="true"><div class="mark">✦</div><div class="mark">★</div><div class="mark">✧</div><div class="mark">✦</div></div>
+<main class="wrap">
+  <header class="header">
+    <div>
+      <span class="kicker">Teste tipográfico</span>
+      <h1>Fonte para <span>PinguNana</span></h1>
+    </div>
+    <p>Mesmos elementos do media kit, com combinações de fontes diferentes. Abra em desktop, tablet e celular e observe nome, leitura do texto, números e stickers.</p>
+  </header>
+
+  <section class="grid" aria-label="Comparação de fontes">
+    <article class="sample outfit-dm">
+      <div class="titlebox">Opção 01 · Outfit + DM Sans</div>
+      <div class="cover">
+        <div>
+          <div class="brandname">Pingu<span class="y">Nana</span></div>
+          <div class="tagline">Multiartista · Música ao vivo & Arte · Streamer · Bilíngue</div>
+          <p class="lead">Multiartista e streamer que une <b>música ao vivo</b>, <b>arte autoral</b> e cultura creator em uma linguagem visual própria.</p>
+          <div class="stickers"><span class="sticker">660 mil views/28 dias</span><span class="sticker">Bilíngue PT/EN</span><span class="sticker">Brand safe</span></div>
+        </div>
+        <div class="frame">Área de foto / arte</div>
+      </div>
+      <div class="metrics"><div class="tile"><div class="metric">660 mil</div><div class="metric-label">Views em 28 dias</div></div><div class="tile"><div class="metric">36,6%</div><div class="metric-label">Interações ÷ alcance</div></div><div class="tile"><div class="metric">+1.730</div><div class="metric-label">Novos seguidores</div></div></div>
+      <p class="note">Mais creator, arredondada e atual. Boa leitura sem parecer fonte padrão de apresentação.</p><span class="verdict">Minha recomendação</span>
+    </article>
+
+    <article class="sample jakarta-dm">
+      <div class="titlebox">Opção 02 · Plus Jakarta Sans + DM Sans</div>
+      <div class="cover"><div><div class="brandname">Pingu<span class="y">Nana</span></div><div class="tagline">Multiartista · Música ao vivo & Arte · Streamer · Bilíngue</div><p class="lead">Conteúdo com <b>identidade estética</b>, presença musical e dados recentes de alcance orgânico para parcerias bem alinhadas.</p><div class="stickers"><span class="sticker">660 mil views/28 dias</span><span class="sticker">PT/EN</span><span class="sticker">Baixa fricção</span></div></div><div class="frame">Área de foto / arte</div></div>
+      <div class="metrics"><div class="tile"><div class="metric">660 mil</div><div class="metric-label">Views em 28 dias</div></div><div class="tile"><div class="metric">366 mil</div><div class="metric-label">Contas alcançadas</div></div><div class="tile"><div class="metric">82,9 mil</div><div class="metric-label">Maior dia</div></div></div>
+      <p class="note">Mais premium e segura. Excelente se quiser elevar o media kit para leitura de agência/marca.</p><span class="verdict">Mais institucional</span>
+    </article>
+
+    <article class="sample manrope-inter">
+      <div class="titlebox">Opção 03 · Manrope + Inter</div>
+      <div class="cover"><div><div class="brandname">Pingu<span class="y">Nana</span></div><div class="tagline">Multiartista · Música ao vivo & Arte · Streamer · Bilíngue</div><p class="lead">Ações com <b>entregas claras</b>, brand safety, acompanhamento legal e possibilidade de relatório pós-publicação.</p><div class="stickers"><span class="sticker">Conteúdo nativo</span><span class="sticker">Creator em crescimento</span><span class="sticker">Música ao vivo</span></div></div><div class="frame">Área de foto / arte</div></div>
+      <div class="metrics"><div class="tile"><div class="metric">36,6%</div><div class="metric-label">Interações ÷ alcance</div></div><div class="tile"><div class="metric">+803</div><div class="metric-label">Pico seguidores/dia</div></div><div class="tile"><div class="metric">2</div><div class="metric-label">Ondas no período</div></div></div>
+      <p class="note">Muito legível e menos comum que Space Grotesk, mas ainda pode ficar mais corporativa.</p><span class="verdict">Mais neutra</span>
+    </article>
+
+    <article class="sample fraunces-dm">
+      <div class="titlebox">Opção 04 · Fraunces no nome + DM Sans</div>
+      <div class="cover"><div><div class="brandname">Pingu<span class="y">Nana</span></div><div class="tagline">Multiartista · Música ao vivo & Arte · Streamer · Bilíngue</div><p class="lead">Uma presença visual mais artística no nome, mantendo o restante do kit com <b>leitura limpa</b> e estrutura profissional.</p><div class="stickers"><span class="sticker">Arte autoral</span><span class="sticker">Música</span><span class="sticker">Creator culture</span></div></div><div class="frame">Área de foto / arte</div></div>
+      <div class="metrics"><div class="tile"><div class="metric">660 mil</div><div class="metric-label">Views em 28 dias</div></div><div class="tile"><div class="metric">36,6%</div><div class="metric-label">Interação</div></div><div class="tile"><div class="metric">PT/EN</div><div class="metric-label">Conteúdo bilíngue</div></div></div>
+      <p class="note">Mais assinatura artística. Funciona se o nome puder ter personalidade sem afetar os textos comerciais.</p><span class="verdict">Mais autoral</span>
+    </article>
+  </section>
+</main>
+</body>
+</html>

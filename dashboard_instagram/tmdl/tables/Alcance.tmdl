@@ -1,0 +1,31 @@
+table Alcance
+    lineageTag: e5f6g7h8-0001
+
+    column Data
+        dataType: dateTime
+        formatString: dd/mm/yyyy
+        sourceColumn: Date
+
+    column Alcance
+        dataType: int64
+        formatString: #,##0
+        sourceColumn: Reach
+
+    measure 'Total Alcance' = SUM(Alcance[Alcance])
+        formatString: #,##0
+        description: "Soma total do alcance de pessoas únicas no período."
+
+    measure 'Engajamento %' = DIVIDE([Total Interacoes], [Total Alcance], 0)
+        formatString: 0.00%
+        description: "Taxa média de engajamento relativa ao alcance total."
+
+    partition Alcance-Partition = m
+        mode: import
+        source =
+            let
+                Path = pDataBasePath & "\" & pAccountName & "\Reach.csv",
+                Source = Csv.Document(File.Contents(Path), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.None]),
+                #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+                #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Reach", Int64.Type}})
+            in
+                #"Changed Type"
