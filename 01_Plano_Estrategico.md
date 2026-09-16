@@ -1,25 +1,25 @@
 # Plano Estratégico — PinguNana
 
-> Documento vivo · versão 2 · 21/07/2026
+> Documento vivo · versão 3 · 16/09/2026
 > Artista multidisciplinar: música ao vivo + arte visual (ilustração digital, pintura a óleo, trabalhos manuais) + ética DIY/punk. Streamer, bilíngue (PT/EN), 16–17 anos (menor).
 > Assinatura: instrumentos (violão e guitarra) customizados à mão por ela com canetas acrílicas.
 > Negociações e recebimentos conduzidos pela mãe (titular do MEI) e pai (responsável).
 
 ---
 
-## 1. Onde estamos (diagnóstico)
+## 1. Onde estamos (diagnóstico atualizado — Snapshot 90 Dias)
 
-**Alcance x base instalada — a assimetria que define a estratégia.**
-A criadora já gera **centenas de milhares de visualizações** em vídeo curto com ~1 mês de produção consistente, mas a base seguida ainda é pequena (≈1.200 no Instagram) e a Twitch está em fase inicial (Hypetrain nível 2 na 1ª semana). Ou seja: **capacidade de viralização comprovada, comunidade ainda em construção.**
+**Da "capacidade viral isolada" para a "tração consistente em 3 ciclos":**
+A criadora superou a fase de teste inicial. Com a consolidação do histórico oficial de 90 dias da Meta (17/jun a 14/set/2026), o perfil acumula **3,26 milhões de visualizações**, **1,2 milhão de contas alcançadas**, **592 mil interações** e **quadruplicou sua base ativa para 5.109 seguidores** (com +5.700 novos seguidores conquistados).
 
-Consequência prática: para marcas, o argumento de venda hoje **não é tamanho de audiência** — é *taxa de identificação*, *afinidade de nicho* e *qualidade de produção*. A meta dos próximos 60–90 dias é converter alcance em comunidade fiel e transformar isso em prova social.
+O gráfico diário comprova **3 ondas virais ascendentes e consecutivas** (junho: 74k/dia → julho: 83k/dia → agosto/setembro: 221,6k/dia). Com **93,5% das views vindas de não-seguidores** e taxa de engajamento de **39,5%**, o canal atua comercialmente como um **motor orgânico de descoberta contínua**, e não apenas um perfil micro com alcance restrito à própria base.
 
-| Frente | Status atual | Prioridade |
+| Frente | Status atual (Set/2026) | Prioridade Atual |
 |---|---|---|
-| Vídeo curto (Reels/TikTok) | Viralização provada, sem base grande | Consolidar identidade + capturar seguidores |
-| Twitch | Rotina consistente, início | Fidelizar núcleo, subir Hypetrain |
-| Instagram | ~1.200, conta profissional | Converter alcance viral em seguidores |
-| Comercial | Sem cases, sem mídia kit | **Construir base para 1ª parceria** |
+| **Vídeo curto (Reels/TikTok)** | **3,26M views trimestrais**, 1,4M/mês, 93,5% fora da base | Manter constância algorítmica e monetizar entregas |
+| **Instagram (@pingunana_)** | **5.109 seguidores (4x base)**, paridade de gênero (54% M / 46% F) | Ativação de parcerias com cotas comerciais remuneradas |
+| **Twitch (pingunana_)** | Lives musicais regulares, comunidade engajada, chat ativo | Ponto focal de validação e aprofundamento de produtos |
+| **Comercial & Governança** | Mídia kit interativo bilíngue pronto, MEI regularizado | **Prospecção ativa estruturada (Guia de Cotas v1)** |
 
 ---
 
@@ -82,14 +82,16 @@ Objetivo: aproveitar o bilinguismo — programas globais de afiliados de áudio/
 
 ## 5. Tipos de parceria — ordem de prioridade e dificuldade
 
-| Tipo | Exige nota/CNPJ? | Idade importa? | Dificuldade | Quando buscar |
+| Tipo de Parceria | Exige nota/CNPJ? | Idade importa? | Formato Operacional | Quando buscar |
 |---|---|---|---|---|
-| Permuta (produto por conteúdo) | Não (troca) | Baixo | Fácil | Agora (Fase 1) |
-| Envio de produto / PR | Não | Baixo | Fácil | Agora |
-| Cupom de desconto | Geralmente não | Baixo | Fácil | Fase 1–2 |
-| Afiliado (comissão) | Depende da plataforma | Médio (conta) | Média | Fase 2 |
-| Embaixador de marca | Às vezes | Médio | Média | Fase 2 |
-| Cachê pequeno / publi | **Sim (nota)** | **Alto (ECA)** | Média–Difícil | Fase 2–3 |
+| **Cota 1: Descoberta Orgânica (Reels + Stories)** | Sim (MEI) | Médio (MEI mãe) | R$ 1.200 a R$ 1.800 (remunerada) | **Fase 2 (Ativa agora)** |
+| **Cota 2: Experiência Comunitária (Reels + Live)** | Sim (MEI) | Médio (MEI mãe) | R$ 2.200 a R$ 2.800 (combo multi-canal) | **Fase 2 (Ativa agora)** |
+| **Cota 3: Customização Heroica (Arte + Instrumento)** | Sim (MEI) | Médio (MEI mãe) | R$ 3.000 a R$ 4.200 (assinatura autoral) | **Fase 2 (Ativa agora)** |
+| **Cota 4: Embaixador Trimestral** | Sim (MEI) | Médio (MEI mãe) | R$ 5.500 a R$ 7.500 (contrato 3 meses) | **Fase 2–3 (Alvos maduros)** |
+| Permuta técnica de alto valor (Equipamentos) | Não / NF Remessa | Baixo | Troca de instrumentos/áudio (R$ 1,5k+) | Fase 2 |
+| Envio espontâneo (Seeding / PR) | Não | Baixo | Sem garantia de Reels (uso em live) | Contínuo |
+
+> ⚠️ **Fim da Permuta Passiva em Reels**: Ver detalhamento de precificação e templates no arquivo `10_Guia_Comercial_Propostas_e_Cotas.md`.
 
 Regra prática: **começar sempre pelo topo da tabela** e só subir a complexidade quando houver case anterior que justifique.
 

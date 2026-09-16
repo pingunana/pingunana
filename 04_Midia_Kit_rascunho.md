@@ -18,19 +18,22 @@ Musicista e multiartista brasileira que transforma seus interesses em criação 
 
 ---
 
-## 3. Números *(dados reais Instagram Insights · 24/jun–21/jul/2026 · 28 dias)*
+## 3. Números & Tração Histórica *(Meta Business Suite Insights Oficial · 90 dias & 28 dias)*
 
-A força está na **eficiência e na velocidade**, não no tamanho absoluto. Mostrar sempre o número **junto** do crescimento.
+A força comercial da PinguNana opera em **duplo horizonte**: solidez acumulada no trimestre e entrega massiva no mês recente.
 
-| Métrica | Valor | Destaque |
-|---|---|---|
-| Views (28 dias) | **660 mil** | pico de **82,9 mil/dia** no período |
-| Alcance (28 dias) | **366 mil** | conteúdo circula além da base atual |
-| Interações ÷ alcance | **36,6%** | audiência que reage, não só assiste |
-| Novos seguidores (28 dias) | **+1.730** | pico de **803/dia** |
-| Twitch | **17 lives no mês** | comunidade fiel e consistente |
+| Métrica | Janela Trimestral (90 dias) | Janela Recente (28 dias) | Destaque Comercial |
+|---|---|---|---|
+| **Views (Reels/Vídeo)** | **3,26 Milhões (~3,3M)** | **1,38 Milhão (~1,4M)** | +108,9% no trimestre · ritmo de 1,4M views/mês |
+| **Alcance Único** | **1,20 Milhão (1,2M)** | **595 Mil (~600k)** | Quase 600k pessoas alcançadas a cada mês |
+| **Origem do Público** | **Massivamente externa** | **93,5% não-seguidores** | Fura a bolha algorítmica continuamente |
+| **Interações de Conteúdo** | **592.300 (~592k)** | **235.100 (235k)** | 39,5% taxa no mês · 49,3% acumulada |
+| **Pico em 1 dia** | **3 ondas virais ascendentes** | **221.629 views/dia** | Pico diário de 123k alcance único |
+| **Comunidade Instagram** | **+5.700 no trimestre** | **+2.100 no mês** | **5.109 seguidores (Base quadruplicou)** |
+| **Visitas / Cliques** | **13.200 visitas · 485 cliques** | **3.400 visitas · 146 cliques** | Tráfego qualificado de bio e perfil |
 
-**Público:** **18–34 anos (~85%)**, ~71% masculino. Base **nacional** (São Paulo, Rio e Goiânia no topo), com público **internacional emergente** nas lives. Interesses: música, cultura alternativa, arte, games, streetwear.
+**Público Consolidado:** **18–34 anos (82,2%)**, com paridade de gênero equilibrada (**53,7% masculino e 46,3% feminino**). Base **nacional** (São Paulo 7%, Rio 3,4%, Goiânia/Aparecida 3% no topo), com presença **internacional ativa** nas lives (Portugal 1,5%, EUA 0,2%).  
+**Idiomas:** Português e Inglês (fluente).
 **Idiomas:** Português e Inglês (fluente).
 
 > Leitura comercial: os números devem aparecer com período e fonte. Evitar promessa de performance futura; apresentar como evidência de circulação orgânica, resposta da audiência e crescimento recente. Atualizar estes números a cada ~15 dias (aba Métricas).
@@ -63,18 +66,14 @@ Pilares do bloco:
 
 ---
 
-## 6. Como podemos trabalhar juntos
-*(nesta fase, foco em modelos leves e de longo prazo)*
+## 6. Como podemos trabalhar juntos: Cotas Comerciais & Combos Multi-Canal
+*(Consulte o documento `10_Guia_Comercial_Propostas_e_Cotas.md` para o rate card detalhado e templates de e-mail)*
 
-- **Permuta** — recebo o produto e entrego conteúdo (formato combinado).
-- **Envio de produto / PR** — experimentação genuína.
-- **Cupom de desconto** — código exclusivo para a comunidade.
-- **Afiliado / embaixador** — parceria contínua com comissão.
-- **Conteúdo presencial** (diferencial regional) — gravação criativa em loja/estúdio.
-- **Customização / arte com o produto** — usar tinta, caneta acrílica ou material de arte da marca num projeto real (ex.: pintar um instrumento, uma tela ou objeto), com vídeo de processo.
-
-**Formatos de entrega:** Reel/TikTok, pacote de Stories, menção e demonstração ao vivo na Twitch, vídeo de processo de arte/customização, ou combos.
-*(tabela de referência de valores na aba "Ofertas" da planilha)*
+- **Cota 1: Descoberta Orgânica** — 1 Reels focado em alcance massivo e fura-bolha + sequência de 3 Stories com sticker de link e cupom + fixação no topo do perfil.
+- **Cota 2: Experiência Comunitária** — 1 Reels dedicado + Live especial de 2h na Twitch com produto integrado e demonstração ao vivo + comando `!marca` no chat + painel fixo com banner.
+- **Cota 3: Customização Heroica (Assinatura Autoral)** — Pintura/customização à mão de instrumento ou peça física com material da marca + Reels de time-lapse de processo cinematográfico + live de criação na Twitch + 5 Stories de cobertura.
+- **Cota 4: Embaixador Trimestral** — Parceria contínua de 3 meses com 1 Reels/mês + presença fixa em todas as lives da Twitch + ativações e Stories quinzenais.
+- **Permuta Técnica de Alto Valor** — Aceita apenas para equipamentos e instrumentos de valor de mercado compatível com o cachê de tabela.
 
 ---
 

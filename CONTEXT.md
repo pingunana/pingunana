@@ -34,9 +34,25 @@ _Avoid_: portfólio, proposta.
 Um registro datado de indicadores exportados de uma plataforma. Ele descreve um período definido e não representa uma medição em tempo real.
 _Avoid_: número atual, dado ao vivo.
 
+**Snapshot da API**:
+Um snapshot de métricas criado por uma consulta sob demanda à API oficial da Meta, preservado com o período e a data de corte da consulta.
+_Avoid_: histórico completo, métrica em tempo real.
+
+**Snapshot comercial**:
+O snapshot da API de 30 dias que reúne os indicadores de conta, audiência e conteúdos de maior desempenho usados para atualizar o mídia kit ou sustentar uma proposta.
+_Avoid_: relatório em tempo real, projeção.
+
 **Evidência de desempenho**:
 Um snapshot de métricas ou material visual verificável usado para sustentar uma afirmação no mídia kit ou numa conversa comercial.
 _Avoid_: promessa de resultado, prova de viralização.
+
+**Export histórico**:
+Um arquivo oficial obtido antes da integração com a API, preservado com sua origem e período próprios e sem combinação automática com snapshots da API.
+_Avoid_: snapshot da API, série contínua.
+
+**Indisponibilidade de métricas**:
+O resultado de uma consulta à API que não retorna dados utilizáveis. Ela mantém os snapshots anteriores intactos e não representa valor zero.
+_Avoid_: zero, ausência de audiência.
 
 **Dashboard de métricas**:
 Uma visualização organizada de snapshots de métricas para acompanhamento interno. Ele não substitui os exports originais da plataforma.
